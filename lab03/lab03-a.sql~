@@ -1,0 +1,33 @@
+
+DROP TABLE IF EXISTS games;
+
+DROP TABLE IF EXISTS team_members;
+
+DROP TABLE IF EXISTS result;
+
+CREATE TABLE games
+(
+	id integer PRIMARY KEY,
+	Standing TEXT,
+	Kind_of_sport CHARACTER VARYING(60),
+	Year_of INTEGER,
+	Country CHARACTER VARYING(40)
+);
+
+CREATE TABLE team_members
+(
+	id_members integer, 
+	Team_name CHARACTER VARYING(40) PRIMARY KEY,
+	Country CHARACTER VARYING(40),
+	Result CHARACTER VARYING(20)
+);
+
+CREATE TABLE result
+(
+	ID integer PRIMARY KEY,
+	id_result integer,
+	Team_RivalTeam CHARACTER VARYING(30),
+	Result CHARACTER VARYING(20)
+);
+
+
