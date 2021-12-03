@@ -1,8 +1,0 @@
-ALTER TABLE games DROP CONSTRAINT IF EXISTS ingames;
-ALTER TABLE team_members DROP CONSTRAINT IF EXISTS members;
-ALTER TABLE result DROP CONSTRAINT IF EXISTS results; 
-
-ALTER TABLE team_members ADD CONSTRAINT ingames FOREIGN KEY (Team_name) REFERENCES games (id); 
-
-ALTER TABLE result ADD CONSTRAINT inpcs FOREIGN KEY (id_result) REFERENCES games (id);
-
