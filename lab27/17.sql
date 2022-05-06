@@ -1,0 +1,13 @@
+CREATE RULE ins_y021m11 AS ON INSERT TO data_part_r
+ WHERE (datetime >= '2021-11-01' AND datetime < '2021-12-01')
+ DO INSTEAD INSERT INTO data_y021m11_r VALUES (NEW.*);
+
+CREATE RULE ins_y022m05 AS ON INSERT TO data_y022m05_r
+ WHERE (datetime >= '2021-12-01' AND datetime < '2022-01-01')
+ DO INSTEAD INSERT INTO data_y022m05_r VALUES (NEW.*);
+
+CREATE RULE ins_y022m04 AS ON INSERT TO data_y022m04_r
+ WHERE (datetime >= '2022-01-01' AND datetime < '2022-01-31')
+ DO INSTEAD INSERT INTO data_y022m04_r VALUES (NEW.*);
+
+

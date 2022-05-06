@@ -1,0 +1,4 @@
+SELECT 'fn02' AS tab, COUNT(*) FROM fn_02_04 UNION
+SELECT 'fn06' AS tab, COUNT(*) FROM lab_partition.fn_06_08 UNION
+SELECT 'fn' AS tab, COUNT(*) FROM lab_partition.fn;
+

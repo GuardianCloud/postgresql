@@ -1,0 +1,1 @@
+DROP SCHEMA schema2 CASCADE;
